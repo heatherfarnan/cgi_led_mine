@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3.7
 
 # This code runs continually in the background to apply
 # the stored PWM slider value to the GPIO output
