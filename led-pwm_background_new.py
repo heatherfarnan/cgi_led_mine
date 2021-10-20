@@ -21,7 +21,7 @@ pwm1.start(0) # start with LED off
 pwm2 = GPIO.PWM(led2, 100) # PWM object on our pin at 100 Hz
 pwm2.start(0) # start with LED off
 
-pwm3 = GPIO.PWM(led2, 100) # PWM object on our pin at 100 Hz
+pwm3 = GPIO.PWM(led3, 100) # PWM object on our pin at 100 Hz
 pwm3.start(0) # start with LED off
 
 import json
