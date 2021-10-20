@@ -7,13 +7,13 @@ datas = cgi.FieldStorage()
 # with open('led-pwm.txt', 'w') as f:  
 #   f.write(str(s1))
 
-datab = cgi.FieldStorage()
+# datab = cgi.FieldStorage()
 # b1 = datab.getvalue('option')
 
 import json
 
 s1 = datas.getvalue('slider1')
-b1 = datab.getvalue('option')
+b1 = datas.getvalue('option')
 data = {'slider1':s1, "option":b1}
 
 with open('led-pwm_new.txt', 'w') as f:
