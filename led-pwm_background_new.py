@@ -1,4 +1,4 @@
-#!/usr/bin/python3.7
+#!/usr/bin/python37all
 
 # This code runs continually in the background to apply
 # the stored PWM slider value to the GPIO output
@@ -25,6 +25,9 @@ pwm3 = GPIO.PWM(led3, 100) # PWM object on our pin at 100 Hz
 pwm3.start(0) # start with LED off
 
 import json
+
+with open("test.txt", 'w') as o:
+  o.write("i've gotten this far in this code")
 
 while True:
   with open("led-pwm_new.txt", 'r') as f:
