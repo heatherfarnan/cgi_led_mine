@@ -1,13 +1,23 @@
 #!/usr/bin/python37all
+
 import cgi
 datas = cgi.FieldStorage()
-s1 = datas.getvalue('slider1')
+# s1 = datas.getvalue('slider1')
 
-with open('led-pwm.txt', 'w') as f:  
-  f.write(str(s1))
+# with open('led-pwm.txt', 'w') as f:  
+#   f.write(str(s1))
 
 datab = cgi.FieldStorage()
+# b1 = datab.getvalue('option')
+
+import json
+
+s1 = datas.getvalue('slider1')
 b1 = datab.getvalue('option')
+data = {'slider1':s1, "option":b1}
+
+with open('led-pwm_new.txt', 'w') as f:
+  json.dump(data,f)
 
 print('Content-type: text/html\n\n')
 print('<html>')
