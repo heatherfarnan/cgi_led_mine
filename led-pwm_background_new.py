@@ -36,7 +36,7 @@ while True:
     activeled = str(values['option'])
 
   with open("test.txt", 'w') as o:
-    o.write("i've gotten this far in this code {}".format(activeled))
+    o.write("i've gotten this far in this code heyo {}".format(activeled))
 
   if "a" in activeled:
     pwm1.ChangeDutyCycle(dutyCycle)
