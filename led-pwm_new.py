@@ -1,4 +1,4 @@
-#!/usr/bin/python27all
+#!/usr/bin/python37all
 import cgi
 data = cgi.FieldStorage()
 s1 = data.getvalue('slider1')
