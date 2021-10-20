@@ -26,14 +26,17 @@ pwm3.start(0) # start with LED off
 
 import json
 
-with open("test.txt", 'w') as o:
-  o.write("i've gotten this far in this code")
+# with open("test.txt", 'w') as o:
+#   o.write("i've gotten this far in this code")
 
 while True:
   with open("led-pwm_new.txt", 'r') as f:
     values = json.load(f)
     dutyCycle = float(values['slider1']) #f.read()) # read duty cycle value from file
     activeled = str(values['option'])
+
+  with open("test.txt", 'w') as o:
+    o.write("i've gotten this far in this code {}".format(activeled))
 
   if "a" in activeled:
     pwm1.ChangeDutyCycle(dutyCycle)
